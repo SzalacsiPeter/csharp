@@ -1,0 +1,352 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace tombok
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            /*
+            // 3 sor, 4 oszlop
+            int[,] m = new int[3, 4];
+
+            int R = m.GetLength(0); // sorok száma
+            int C = m.GetLength(1); // oszlopok száma
+
+            // Feltöltés: m[i, j] = i * 10 + j
+            for (int i = 0; i < R; i++)
+            {
+                for (int j = 0; j < C; j++)
+                {
+                    m[i, j] = i * 10 + j;
+                }
+            }
+
+            // Kiíratás szépen táblázatosan
+            Console.WriteLine("A mátrix tartalma:");
+            for (int i = 0; i < R; i++)
+            {
+                for (int j = 0; j < C; j++)
+                {
+                    Console.Write(m[i, j].ToString().PadLeft(4));
+                }
+                Console.WriteLine();
+            }
+            */
+
+
+            /*
+            int[,] m =
+            {
+                {1, 2, 3, 4},
+                {5, 6, 7, 8},
+                {9, 10, 11, 12},
+                {13, 14, 15, 16},
+                {17, 18, 19, 20}
+            };
+
+            int R = m.GetLength(0);
+            int C = m.GetLength(1);
+            
+
+            for (int i = 0; i < R; i++)
+            {
+                for (int j = 0; j < C; j++)
+                {
+                    Console.Write(m[i, j].ToString().PadLeft(4));
+                }
+                Console.WriteLine();
+            }
+
+            int osszeg = 0;
+            foreach (int x in m)
+            {
+                osszeg += x;
+            }
+
+            int elemszam = m.Length;
+            int atlag = osszeg / elemszam;
+
+            Console.WriteLine($"\nÖsszeg = {osszeg}");
+            Console.WriteLine($"Átlag (egész osztással) = {atlag}");
+            */
+
+            /*
+            Random vsz = new Random();
+            int[,] tomb = new int[5, 5];
+
+            int R = tomb.GetLength(0);
+            int C = tomb.GetLength(1);
+
+            for (int i = 0; i < R; i++)
+            {
+                for (int j = 0; j < C; j++)
+                {
+                    tomb[i, j] = vsz.Next(10,50);
+                }
+            }
+
+            for (int i = 0; i < R; i++)
+            {
+                for (int j = 0; j < C; j++)
+                {
+                    Console.Write("{0},",tomb[i, j]);
+                }
+            }
+            Console.WriteLine();
+            */
+
+
+
+
+            //--------------------------------------------------------------
+
+
+
+
+
+            /*
+            1.Feladat: Készíts egy 3x4-es kétdimenziós tömböt, és töltsd fel tetszőleges egész számokkal! 
+
+
+            int[,] tomb =
+            {
+                {27,12,2,6},
+                {67,4,1,8},
+                {90,34,11,51}
+            };
+
+            int R = tomb.GetLength(0);
+            int C = tomb.GetLength(1);
+
+            for (int i = 0; i < R; i++)
+            {
+                for (int j = 0; j < C; j++)
+                {
+                    Console.Write("{0},", tomb[i,j]);
+                }
+                Console.WriteLine();
+            }
+            */
+
+
+            /*
+             2.Feladat: Készíts egy 3x3-as kétdimenziós tömböt, töltsd fel véletlenszámokkal (0-99), majd írasd ki a tömb elemeit táblázatos formában, és számítsd ki az elemek összegét és átlagát!
+            
+            Random vsz = new Random();
+            int[,] tomb = new int[3, 3];
+
+            int R = tomb.GetLength(0);
+            int C = tomb.GetLength(1);
+
+            for (int i = 0; i < R; i++)
+            {
+                for (int j = 0; j < C; j++)
+                {
+                    tomb[i, j] = vsz.Next(0,100);
+                }
+            }
+
+            for (int i = 0; i < R; i++)
+            {
+                for (int j = 0; j < C; j++)
+                {
+                    Console.Write("{0},", tomb[i, j]);
+                }
+                Console.WriteLine();
+            }
+
+            int osszeg = 0;
+            foreach (int x in tomb)
+            {
+                osszeg += x;
+            }
+
+            int elemszam = tomb.Length;
+            int atlag = osszeg / elemszam;
+
+            Console.WriteLine($"\nÖsszeg = {osszeg}");
+            Console.WriteLine($"Átlag (egész osztással) = {atlag}");
+            */
+
+
+            /*
+            3.Feladat: Készíts egy 4x4-es kétdimenziós tömböt, töltsd fel tetszőleges egész számokkal! Írasd ki a tömb elemeit táblázatos formában, és határozd meg a legkisebb és legnagyobb elemet!
+
+            int[,] tomb ={
+                {5,8,12,1},
+                {3,7,14,13},
+                {6,9,11,67},
+                {4,10,2,20}
+            };
+
+            int R = tomb.GetLength(0);
+            int C = tomb.GetLength(1);
+            int max = tomb[0,0];
+            int min = tomb[0,0];
+
+
+            for (int i = 0; i < R; i++)
+            {
+                for (int j = 0; j < C; j++)
+                {
+                    Console.Write("{0},", tomb[i,j]);
+                }
+                Console.WriteLine();
+            }
+
+            for (int i = 0; i < R; i++)
+            {
+                for (int j = 0; j < C; j++)
+                {
+                    if (tomb[i,j] > max)
+                    {
+                        max = tomb[i,j];
+                    }
+                    if (tomb[i,j] < min)
+                    {
+                        min = tomb[i,j];
+                    }
+                }
+            }
+
+            Console.WriteLine($"\nLegkisebb elem = {min}");
+            Console.WriteLine($"Legnagyobb elem = {max}");
+            */
+
+
+            /*
+            // 4.Feladat: Készíts egy 3x4-es kétdimenziós tömböt, töltsd fel tetszőleges egész számokkal! Írasd ki a tömb elemeit táblázatos formában, és számítsd ki az egyes sorok, valamint oszlopok összegét!
+            int[,] tomb =
+            {
+                {5,8,12,1},
+                {3,7,14,13},
+                {6,9,11,67}
+            };
+
+            int R = tomb.GetLength(0);
+            int C = tomb.GetLength(1);
+            int oszloposszeg = 0;
+            int sorosszeg = 0;
+
+            for (int i = 0; i < R; i++)
+            {
+                for (int j = 0; j < C; j++)
+                {
+                    Console.Write("{0},", tomb[i,j]);
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+
+            for (int i = 0; i < R; i++)
+            {
+                for (int j = 0; j < C; j++)
+                {
+                    sorosszeg += tomb[i, j];
+                }
+                Console.WriteLine($"Sor {i} összege = {sorosszeg}");
+            }
+            Console.WriteLine();
+            for (int j = 0; j < C; j++)
+            {
+                for (int i = 0; i < R; i++)
+                {
+                    oszloposszeg += tomb[i, j];
+                }
+                Console.WriteLine($"Oszlop {j} összege = {oszloposszeg}");
+            }
+            */
+
+            /*
+
+            // 5.Feladat: Készíts egy 3x4-es kétdimenziós tömböt, töltsd fel tetszőleges egész számokkal! Írasd ki a tömb elemeit táblázatos formában, és számítsd ki a páros és páratlan számok mennyiségét!   
+            int[,] tomb =
+            {
+                {5,8,12,1},
+                {3,7,14,13},
+                {6,9,11,67}
+            };
+
+            int R = tomb.GetLength(0);
+            int C = tomb.GetLength(1);
+            int paros = 0;
+            int paratlan = 0;
+
+            for (int i = 0; i < R; i++)
+            {
+                for (int j = 0; j < C; j++)
+                {
+                    Console.Write("{0},", tomb[i,j]);
+                }
+                Console.WriteLine();
+            }
+
+            for (int i = 0; i < R; i++)
+            {
+                for (int j = 0; j < C; j++)
+                {
+                    if (tomb[i,j] % 2 == 0)
+                    {
+                        paros++;
+                    }
+                    else
+                    {
+                        paratlan++;
+                    }
+                }
+            }
+            Console.WriteLine($"\nPáros számok száma = {paros}");
+            Console.WriteLine($"Páratlan számok száma = {paratlan}");
+            */
+
+
+            /*
+            // 6.Feladat: Készíts egy 3x3-as kétdimenziós tömböt, töltsd fel tetszőleges egész számokkal! Írasd ki a tömb elemeit táblázatos formában, és határozd meg, hogy hány tükörszám található a tömbben! (A tükörszám olyan szám, amely visszafelé olvasva is ugyanaz, pl. 121, 131, 22, 7, stb.)
+            {
+                int[,] tomb = { 
+                    { 121, 34, 22 }, 
+                    { 11, 45, 131 }, 
+                    { 56, 88, 77 } 
+                };
+                
+                int tukkorszamok = 0;
+
+                bool Tukorszam(int szam) // lokális függvény Main-ben
+                {
+                    int eredeti = szam;
+                    int visszafele = 0;
+
+                    while (szam > 0)
+                    {
+                        int jegy = szam % 10;
+                        visszafele = visszafele * 10 + jegy;
+                        szam /= 10;
+                    }
+
+                    return eredeti == visszafele;
+                }
+
+                foreach (var v in tomb)
+                {
+                    if (Tukorszam(v))
+                        tukkorszamok++;
+                }
+
+                Console.WriteLine($"A mátrixban lévő tükörszámok száma: {tukkorszamok}");
+            }
+            */
+
+
+
+
+
+
+        }
+    }
+}
